@@ -172,13 +172,16 @@
         </span>
       </div>
     </section>
-    <section class="wf__region" id="최근에-적은-것들" style="grid-column:1;grid-row:2;min-height:240px;border-radius:10px;border-width:1px;border-color:var(--wf-line, currentColor);padding:min(36px, 6vw)">
-      <div class="wf-sec" style="align-items:flex-start">
-        <h2 class="wf-sec__title">최근에 적은 것들</h2>
-        <div class="wf-sec__cols" style="grid-template-columns:repeat(1, minmax(0, 1fr))">
-          <p class="wf-sec__body">매주 하나씩, 그 주에 막혔던 걸 정리합니다. 잘 풀린 날보다 안 풀린 날 글이 깁니다.</p>
-        </div>
-        <ol class="wf-time"><li class="wf-time__row"><b>7월 4주</b><span>커넥션 풀을 20으로 두고 동시 요청 200을 때려 봤습니다. 대기가 쌓이다 타임아웃 나는 걸 처음 눈으로 봤습니다.</span></li><li class="wf-time__row"><b>7월 3주</b><span>인덱스를 걸었는데 오히려 느려진 쿼리가 있었습니다. EXPLAIN을 읽는 법을 이때 배웠습니다.</span></li><li class="wf-time__row"><b>7월 2주</b><span>도커 이미지가 1.2GB였습니다. 멀티스테이지 빌드로 180MB까지 줄였습니다.</span></li><li class="wf-time__row"><b>7월 1주</b><span>로그에 사용자 이메일을 그대로 찍고 있었습니다. 전부 마스킹 처리했습니다.</span></li><li class="wf-time__row"><b>6월 4주</b><span>재시도를 무한으로 걸어 두면 장애가 커진다는 걸 알았습니다. 상한과 백오프를 넣었습니다.</span></li><li class="wf-time__row"><b>6월 3주</b><span>타임존 때문에 하루가 밀렸습니다. 이후로 서버는 전부 UTC로 두고 표시할 때만 바꿉니다.</span></li></ol>
+    <section class="wf__region" style="grid-column:1;grid-row:2;min-height:320px;border-radius:10px;border-width:1px;border-color:var(--wf-line, currentColor);padding:min(36px, 6vw)">
+      <div class="wf-tl">
+        <span class="wf-tl__eyebrow">주차별</span>
+        <h2 class="wf-tl__title">최근에 적은 것들</h2>
+        <ol class="wf-tl__list"><li class="wf-tl__item"><span class="wf-tl__label">7월 4주</span><b class="wf-tl__head">커넥션 풀 고갈</b><p class="wf-tl__desc">풀을 20으로 두고 동시 요청 200을 때려 봤습니다. 대기가 쌓이다 타임아웃 나는 걸 처음 눈으로 봤습니다.</p></li>
+        <li class="wf-tl__item"><span class="wf-tl__label">7월 3주</span><b class="wf-tl__head">EXPLAIN 읽는 법</b><p class="wf-tl__desc">인덱스를 걸었는데 오히려 느려진 쿼리가 있었습니다. 실행 계획을 읽을 줄 알아야 한다는 걸 배웠습니다.</p></li>
+        <li class="wf-tl__item"><span class="wf-tl__label">7월 2주</span><b class="wf-tl__head">이미지 다이어트</b><p class="wf-tl__desc">도커 이미지가 1.2GB였습니다. 멀티스테이지 빌드로 180MB까지 줄였습니다.</p></li>
+        <li class="wf-tl__item"><span class="wf-tl__label">7월 1주</span><b class="wf-tl__head">로그에 개인정보</b><p class="wf-tl__desc">사용자 이메일을 그대로 찍고 있었습니다. 전부 마스킹 처리했습니다.</p></li>
+        <li class="wf-tl__item"><span class="wf-tl__label">6월 4주</span><b class="wf-tl__head">무한 재시도의 함정</b><p class="wf-tl__desc">재시도를 무한으로 걸면 장애가 커진다는 걸 알았습니다. 상한과 백오프를 넣었습니다.</p></li>
+        <li class="wf-tl__item"><span class="wf-tl__label">6월 3주</span><b class="wf-tl__head">타임존</b><p class="wf-tl__desc">하루가 밀렸습니다. 이후로 서버는 전부 UTC로 두고 표시할 때만 바꿉니다.</p></li></ol>
       </div>
     </section>
     <section class="wf__region" style="grid-column:1;grid-row:3;min-height:260px;border-radius:10px;border-width:1px;border-color:var(--wf-line, currentColor);padding:min(44px, 6vw)">
@@ -189,7 +192,6 @@
       </div>
     </section>
     </div>
-    <a class="wf-down" href="#%EC%B5%9C%EA%B7%BC%EC%97%90-%EC%A0%81%EC%9D%80-%EA%B2%83%EB%93%A4" aria-label="아래로 이동"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M6 13l6 6 6-6"/></svg></a>
   </div>
   </section>
   <section class="wf-pg" id="pg-2">
@@ -229,7 +231,7 @@
         <a href="#pg-1" class="wf-nav__item">Log</a>
         <a href="#pg-2" class="wf-nav__item is-current">Contact</a>
       </nav>
-        <span class="wf-foot__time" data-wf-clock="Asia/Seoul" data-wf-city="Busan">Busan, 00:36</span>
+        <span class="wf-foot__time" data-wf-clock="Asia/Seoul" data-wf-city="Busan">Busan, 22:20</span>
         <a class="wf-foot__mail" href="mailto:jihoon.bae@example.com">jihoon.bae@example.com</a>
       </footer></div>
     </div>
